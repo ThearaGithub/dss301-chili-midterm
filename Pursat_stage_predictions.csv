@@ -1,0 +1,11 @@
+stage,DAT_anchor,standard_date,GDD_threshold,predicted_date,predicted_DAT,delta_days,note
+1. Transplant,0,04/07/2026,0,04/07/2026,0,0,fixed planting date
+2. Establishment,7,11/07/2026,151,12/07/2026,8,1,
+3. Vegetative,30,03/08/2026,579,04/08/2026,31,1,
+4. Flowering,45,18/08/2026,860,20/08/2026,47,2,
+5. Fruit set,60,02/09/2026,1127,04/09/2026,62,2,
+6. First harvest,75,17/09/2026,1387,18/09/2026,76,1,
+7. Market fruit,75,17/09/2026,1387,18/09/2026,76,1,same DAT anchor as first harvest
+8. Maturity,75+,starts 17/09/2026,,18/09/2026,76,,colour change within harvest window
+9. Harvest,75-150,17/09/2026-02/12/2026,,18/09/2026 to 04/12/2026,,,window from first harvest to end of cycle
+10. End of cycle,150,02/12/2026,2649,04/12/2026,153,2,

@@ -1,0 +1,32 @@
+# Course material and copyrighted PDFs are not redistributed
+*.pdf
+*.PDF
+
+# Photos and screenshots from the field / lecture
+*.jpg
+*.jpeg
+*.JPG
+*.PNG
+*.png
+!fig_*.png
+
+# OS junk
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Notebook checkpoints and caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.cache/
+
+# Earlier Kampot run — superseded by the Pursat analysis, kept locally only
+Kampot_*
+DSS301_Midterm_RedSky86_Kampot.*
+fig_daily_yield.png
+fig_gdd_seasons.png
+fig_gdd_timeline.png
+
+# Duplicate export of the QA/QC workbook
+QA_QC-Management_DNTY-UKMAC*

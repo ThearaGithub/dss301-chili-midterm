@@ -1,0 +1,25 @@
+parameter,unit,A1_Field_1,A2_Field_2
+Clay (<0.002 mm) %,%,20.75,19.05
+Fine silt (0.002-0.02 mm) %,%,42.1,40.25
+Coarse silt (0.02-0.05 mm) %,%,20.81,17.4
+Fine sand (0.05-0.2 mm) %,%,10.41,17.82
+Coarse sand (0.2-2 mm) %,%,6.88,6.43
+Moisture %,%,2.24,2.44
+Total C %,%,1.7,1.86
+Total N %,%,0.17,0.19
+C/N ratio,-,10.0,10.0
+Organic matter %,%,2.92,3.2
+Total P %,%,0.067,0.073
+Available P (Bray II) ppm,ppm,155.0,173.0
+CEC (meq/100g),cmol/kg,18.4,18.5
+Exch. Ca,cmol/kg,8.5,8.89
+Exch. Mg,cmol/kg,2.37,2.57
+Exch. Na,cmol/kg,0.41,0.95
+Exch. K,cmol/kg,0.77,1.98
+Total exchangeable bases,cmol/kg,12.05,14.39
+Base saturation %,%,65.0,78.0
+Exchange acidity,cmol/kg,17.5,10.0
+Exch. Al,cmol/kg,0.2,0.16
+"EC (uS/cm, 1:5)",uS/cm,76.4,178.2
+pH H2O (1:5),-,7.16,7.11
+pH KCl (1:5),-,6.17,5.87

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NASA POWER links - DSS301 Midterm (Group 5)</title>
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #222; }
+  h1 { font-size: 22px; } h2 { font-size: 17px; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  a.dl { display: block; margin: 10px 0; padding: 12px 16px; background: #eef4ff; border: 1px solid #b8cdf8;
+         border-radius: 8px; text-decoration: none; color: #14418c; font-weight: 600; }
+  a.dl:hover { background: #dce8ff; }
+  a.big { background: #e7f6e7; border-color: #a8d8a8; color: #1a5c1a; font-size: 16px; }
+  a.big:hover { background: #d5f0d5; }
+  .note { background: #fff9e6; border: 1px solid #e8d48b; border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
+  table { border-collapse: collapse; font-size: 14px; } td, th { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+  ol { font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>NASA POWER data &mdash; DSS301 Midterm, Group 5</h1>
+<p>Chili <b>Red Sky 86 F1</b>, Kampot site (lat <b>10.61</b>, lon <b>104.18</b>).<br>
+Two ways to get the data: <b>A)</b> open the NASA website with everything pre-selected and click Download there, or <b>B)</b> download the exact CSV files directly.</p>
+
+<h2>A. Open on the NASA website, pre-selected &mdash; then click Download there</h2>
+<a class="dl big" href="https://power.larc.nasa.gov/data-access-viewer/?pane=single-point&temporal=hourly&parameter=T2M&community=agroclimatology&lat=10.61&lon=104.18&start=2026-07-04&end=2026-10-12">
+CLICK HERE: NASA POWER viewer &mdash; Kampot, hourly, 04/07/2026 &rarr; 12/10/2026, Agroclimatology</a>
+<ol>
+  <li>This opens the <b>Single Point</b> pane with the coordinates <b>10.61 / 104.18</b>, <b>Hourly</b>, parameter <b>T2M</b> and the dates already filled in.</li>
+  <li>In the parameter list tick the ones you need: <b>T2M, T10M, RH2M, QV2M, QV10M, PRECTOTCORR, TSOIL1&ndash;6, GWETTOP, GWETROOT, GWETPROF</b>.</li>
+  <li>Click <b>Submit</b> &rarr; you will see the chart and the data table right on the site.</li>
+  <li>Click <b>Download</b> (CSV) in that pane &mdash; done, you have it yourself.</li>
+</ol>
+<p style="font-size:14px">Other site views: <a href="https://power.larc.nasa.gov/data-access-viewer/">viewer home</a> &middot; <a href="https://power.larc.nasa.gov/data-access-viewer/?pane=single-point&temporal=daily&parameter=T2M_MAX&community=agroclimatology&lat=10.61&lon=104.18&start=2023-07-04&end=2023-12-02">same site, daily 2023 reference</a></p>
+
+<h2>B. Direct CSV download links (exact files used by the notebook)</h2>
+<h2 style="border:none; margin-top:14px">Hourly &mdash; actual 2026 data (04/07/2026 &rarr; 12/10/2026)</h2>
+<a class="dl" href="https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M,T10M,RH2M,QV2M,QV10M,PRECTOTCORR,TSOIL1,TSOIL2,TSOIL3,TSOIL4,TSOIL5,TSOIL6,GWETTOP,GWETROOT,GWETPROF&community=AG&longitude=104.18&latitude=10.61&start=20260704&end=20261012&format=CSV">
+Download: hourly 2026 (2,424 rows) &mdash; all 15 parameters (.csv)</a>
+
+<h2 style="border:none">Hourly &mdash; 2025 proxy (13/10/2025 &rarr; 02/12/2025)</h2>
+<p>NASA has not published the rest of 2026 yet, so the season end (13/10 &rarr; 02/12) uses the same calendar dates of 2025 as a labelled proxy.</p>
+<a class="dl" href="https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M,T10M,RH2M,QV2M,QV10M,PRECTOTCORR,TSOIL1,TSOIL2,TSOIL3,TSOIL4,TSOIL5,TSOIL6,GWETTOP,GWETROOT,GWETPROF&community=AG&longitude=104.18&latitude=10.61&start=20251013&end=20251202&format=CSV">
+Download: hourly 2025 proxy (1,224 rows) &mdash; all 15 parameters (.csv)</a>
+
+<h2 style="border:none">Daily reference seasons (used to calibrate the stage model)</h2>
+<a class="dl" href="https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX,T2M_MIN&community=AG&longitude=104.18&latitude=10.61&start=20230704&end=20231202&format=CSV">Download: daily 2023 (T2M_MAX, T2M_MIN)</a>
+<a class="dl" href="https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX,T2M_MIN&community=AG&longitude=104.18&latitude=10.61&start=20240704&end=20241202&format=CSV">Download: daily 2024 (T2M_MAX, T2M_MIN)</a>
+<a class="dl" href="https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX,T2M_MIN&community=AG&longitude=104.18&latitude=10.61&start=20250704&end=20251202&format=CSV">Download: daily 2025 (T2M_MAX, T2M_MIN)</a>
+
+<div class="note"><b>Later:</b> once NASA releases the remaining 2026 data, change the end date to <code>2026-12-02</code> in link A (or <code>20261202</code> in link B) to get the full season without the proxy.</div>
+
+<h2>Parameter key</h2>
+<table>
+<tr><th>Code</th><th>Meaning</th></tr>
+<tr><td>T2M / T10M</td><td>Air temperature at 2 m / 10 m (&deg;C) &mdash; &ldquo;different elevations&rdquo;</td></tr>
+<tr><td>RH2M</td><td>Relative humidity at 2 m (%)</td></tr>
+<tr><td>QV2M / QV10M</td><td>Specific humidity at 2 m / 10 m (g/kg)</td></tr>
+<tr><td>PRECTOTCORR</td><td>Rainwater (mm/hour)</td></tr>
+<tr><td>TSOIL1&ndash;6</td><td>Soil temperature, layers surface &rarr; deep (&deg;C)</td></tr>
+<tr><td>GWETTOP / GWETROOT / GWETPROF</td><td>Soil wetness (0&ndash;1): surface / root zone / profile</td></tr>
+</table>
+
+<p style="margin-top:30px; font-size:13px; color:#666;">Data source: NASA POWER (Prediction Of Worldwide Energy Resources), MERRA-2 reanalysis &mdash; power.larc.nasa.gov</p>
+</body>
+</html>
