@@ -1,3 +1,5 @@
+![Weather-driven growth stages and yield forecast](banner.png)
+
 # DSS301 Midterm — Red Sky 86 F1 chili, Pursat
 
 Weather-driven growth-stage and yield analysis for a **Red Sky 86 F1** hot chili field in
@@ -5,6 +7,11 @@ Weather-driven growth-stage and yield analysis for a **Red Sky 86 F1** hot chili
 (12.140874 N, 104.0848521 E; NASA POWER grid point 12.141 / 104.085, elevation 121.9 m).
 
 Course: DSS301, RUPP Year 3. Transplants 04/07/2026, farm calendar to 02/12/2026.
+
+**Group 5** — Khon Sotheara · Khann Udomvirak · Chea Sela · Cheang Youpheng
+
+> Presentation deck and a 4-speaker script are included: `DSS301_RedSky86_Pursat_Slides.pptx`
+> and `PRESENTATION_SCRIPT.md` (13 minutes, 13 slides, Q&A bank).
 
 ## Headline results
 
@@ -21,6 +28,20 @@ Course: DSS301, RUPP Year 3. Transplants 04/07/2026, farm calendar to 02/12/2026
 Dominant stress is **disease pressure from humid nights** (1,209 hours with RH ≥ 90 %), not heat:
 there are **zero hours above 35 °C** in the sensitive 45–150 DAT window, no day over 50 mm and no
 dry spell.
+
+## Visuals
+
+| Cumulative GDD and stage dates | Daily yield distribution |
+|---|---|
+| ![GDD timeline](fig_pursat_gdd_timeline.png) | ![Daily yield](fig_pursat_daily_yield.png) |
+
+| Where the loss comes from | Soil pH against the chili optimum |
+|---|---|
+| ![Loss channels](fig_slide_loss.png) | ![Soil pH](fig_pursat_soil_ph.png) |
+
+| Kampot vs Pursat cross-check | Reference seasons |
+|---|---|
+| ![Site comparison](fig_slide_compare.png) | ![Season comparison](fig_pursat_gdd_seasons.png) |
 
 ## Method
 
@@ -62,6 +83,9 @@ dry spell.
 | `Pursat_daily_yield.csv` | Daily yield distribution |
 | `Pursat_soil_lab_11-23.csv` | Soil lab results, A1 / A2 |
 | `fig_pursat_*.png` | GDD timeline, daily yield, season comparison, soil pH |
+| `fig_slide_*.png`, `banner.png` | README banner and presentation charts |
+| `DSS301_RedSky86_Pursat_Slides.pptx` | 13-slide presentation deck |
+| `PRESENTATION_SCRIPT.md` | Speaker script, timings and Q&A bank for four presenters |
 | `Links.md` | Source links |
 | `AGENTS.md` | Project notes and change log |
 
