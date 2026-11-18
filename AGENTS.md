@@ -407,7 +407,7 @@ Only **two** sources feed the numbers: NASA POWER (weather) and the instructor's
 2. **End-of-cycle date is extrapolated** (2,621 GDD reached vs 2,649 threshold).
 3. **Yield settings are assumptions**: 1.55 kg/plant potential, 25,000 plants/ha, the six penalty coefficients, 35 % cap.
 4. **Soil water 90 mm** = assumed AWC 0.20 × rooting depth 0.45 m, not measured.
-5. **Planted area 56.5 ha / 34.5 ha is carried from the Kampot layout** — the real Pursat planted area is still unknown, so tonnages are indicative; per-hectare figures are unaffected. This is the weakest link if a marker probes.
+5. **Block count is ours, the area rule is hers.** The brief states "1 block = 0.5 ha", so 113 blocks → 56.5 ha and 69 plots → 34.5 ha; the block counts themselves were carried over from the Kampot layout, and the real Pursat block count is unknown. Tonnages are therefore indicative; per-hectare figures are unaffected. This is the weakest link if a marker probes.
 
 ### 12.5 Environment gotchas
 
