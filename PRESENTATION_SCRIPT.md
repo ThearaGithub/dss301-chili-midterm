@@ -26,7 +26,7 @@ Handovers are written into the script — say the last line, then step aside.
 >
 > The coordinates are not a district average — they are the exact pin our instructor gave us: 12.14 north, 104.08 east, on a NASA grid point at 121.9 metres elevation. Transplant is 4 July 2026 and the farm calendar ends 2 December.
 >
-> One thing matters for how you read this: we used exactly the same method as our earlier Kampot analysis, so any difference between the two sites is the weather, not the model."
+> One thing matters for how you read this: every number is made for that one point. We are not describing the district, and we are not averaging several sites together."
 
 ### Slide 3 · Two sources (1:00)
 > "We used two sources and nothing else.
@@ -105,10 +105,12 @@ Handovers are written into the script — say the last line, then step aside.
 >
 > A2 is the better field: base saturation 78 percent against 65, and nearly three times the potassium. Plant-available water is about 90 millimetres, which is why the dry-spell channel stayed empty."
 
-### Slide 10 · Cross-check (1:00)
-> "One reason we trust these numbers is that we ran the identical method on our earlier Kampot site. Pursat is 4.9 percent cooler in GDD, has 36 percent less rain, and 38 percent more hours above 90 percent humidity.
+### Slide 10 · Sensitivity (1:00)
+> "A forecast is only as good as its assumptions, so we pushed on the ones that move the answer. Halve every loss coefficient, or double every one, and attainable yield stays between 1.01 and 1.30 kilograms per plant — a 26 percent spread, not a factor of two.
 >
-> Same code, same coefficients, different answer — which is the point. A method that gave the same yield everywhere would not be measuring the weather."
+> The timing is tighter still. Re-run the same thresholds against 2023, 2024 and 2025 and the stages land within about two days of where the standard calendar puts them.
+>
+> So the two conclusions we care about — harvest starts on 18 September, and humidity costs us the yield — do not depend on any single coefficient we chose."
 
 ### Slide 11 · Limits (0:50)
 > "What we did not measure. A third of the season is a labelled proxy. One date is extrapolated. Five inputs — potential yield, density, the loss coefficients, the planted area and soil water — are assumptions carried from the method, not measurements from this field. And the weather grid is 55 kilometres, which is coarse for one field near the Cardamoms.

@@ -21,13 +21,9 @@ __pycache__/
 *.pyc
 .cache/
 
-# Earlier Kampot run — superseded by the Pursat analysis, kept locally only
-Kampot_*
-DSS301_Midterm_RedSky86_Kampot.*
-fig_daily_yield.png
-fig_gdd_seasons.png
-fig_gdd_timeline.png
-
 # Duplicate export of the QA/QC workbook
 QA_QC-Management_DNTY-UKMAC*
 !banner.png
+
+# local python packages installed for deck scripting
+.pylibs/

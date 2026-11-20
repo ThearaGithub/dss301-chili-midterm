@@ -7826,11 +7826,10 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Site-selection-%E2%80%94-why-the-analysis-was-moved-to-Pursat">1. Site selection — why the analysis was moved to Pursat<a class="anchor-link" href="#1.-Site-selection-%E2%80%94-why-the-analysis-was-moved-to-Pursat">¶</a></h2><p>The earlier version of this project screened ten Cambodian provinces and selected <strong>Kampot</strong> because no farm location had been given. The instructor has since supplied a <strong>specific field location</strong> on the map link in <code>Links.md</code>:</p>
+<h2 id="1.-The-field-%E2%80%94-the-instructor's-location">1. The field — the instructor's location<a class="anchor-link" href="#1.-The-field-%E2%80%94-the-instructor's-location">¶</a></h2><p>The brief asks for predictions <em>for the farm</em>, and the instructor supplied a specific field location on the map link in <code>Links.md</code>:</p>
 <p><code>12°08'27.2"N 104°05'05.5"E</code> → <strong>12.140874, 104.0848521</strong></p>
-<p>Reverse geocoding resolves this to <strong>Damnak Trayeung village, Phnum Kravanh district, Pursat province</strong> — the foothills west of the Tonle Sap, roughly 250 km north-west of the Kampot site. Because the brief asks for predictions <em>for the farm</em>, every result below is computed for this coordinate.</p>
-<p>This is consistent with the original screening, where Pursat scored <strong>0.755</strong> against Kampot's 0.758 — effectively a tie on climate, and now decided by the actual field location rather than by a screening score.</p>
-<p><strong>Why the move is defensible on the numbers:</strong> Pursat is cooler (mean 26.8 °C vs 27.4 °C), receives 36 % less rain (900 mm vs 1,402 mm), and has a drier root zone (mean wetness 0.70 vs 0.85) — a materially different water balance from the Kampot analysis. Simply relabelling the Kampot run would have been wrong.</p>
+<p>Reverse geocoding resolves this to <strong>Damnak Trayeung village, Phnum Kravanh district, Pursat province</strong> — the foothills west of the Tonle Sap, sitting on a NASA POWER grid point 121.9 m above sea level. Every result below is computed for this coordinate; no other site is analysed.</p>
+<p><strong>Why the field matters:</strong> the point is cooler than the lowland average (season mean 26.8 °C), receives about 900 mm of rain across the window, and its root zone holds around 0.70 wetness all season. The dominant agronomic risk is therefore not heat and not drought, but <strong>humidity-driven disease</strong> — which is exactly what the loss model in Section 6 measures.</p>
 </div>
 </div>
 </div>
@@ -8456,7 +8455,7 @@ missing values (NaN): 0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-Soil-&amp;-microclimate-conditions-(all-brief-parameters-used)">4. Soil &amp; microclimate conditions (all brief parameters used)<a class="anchor-link" href="#4.-Soil-&amp;-microclimate-conditions-(all-brief-parameters-used)">¶</a></h2><p>The brief also asks for soil temperature, soil moisture and the humidity/elevation profiles. Measured over 04/07 – 02/12 at the Pursat point:</p>
+<h2 id="4.-Soil-&amp;-microclimate-conditions-(all-brief-parameters-used)">4. Soil &amp; microclimate conditions (all brief parameters used)<a class="anchor-link" href="#4.-Soil-&amp;-microclimate-conditions-(all-brief-parameters-used)">¶</a></h2><p>The brief also asks for soil temperature, soil moisture and the humidity/elevation profiles. Measured over 04/07 – 02/12 at the field point:</p>
 <table>
 <thead>
 <tr>
@@ -8484,7 +8483,7 @@ missing values (NaN): 0
 <tr>
 <td>Surface wetness GWETTOP</td>
 <td>mean 0.71; 482 / 5 h above 0.8 / 0.9</td>
-<td>moderate waterlogging risk, far lower than Kampot</td>
+<td>moderate waterlogging risk in the heaviest spells</td>
 </tr>
 <tr>
 <td>Air temperature gradient T2M vs T10M</td>
@@ -8498,7 +8497,7 @@ missing values (NaN): 0
 </tr>
 </tbody>
 </table>
-<p><strong>Interpretation:</strong> the root zone stays between 0.55 and near-saturation all season, so this site is <strong>not drought-limited</strong> either — but unlike Kampot it also never becomes waterlogged for long stretches. The dominant agronomic risk here is <strong>humidity-driven disease</strong>, which is exactly what the loss model in Section 7 measures.</p>
+<p><strong>Interpretation:</strong> the root zone stays between 0.55 and near-saturation all season, so the site is <strong>not drought-limited</strong>, and it never stays waterlogged for long stretches either. The dominant agronomic risk is <strong>humidity-driven disease</strong>, which is exactly what the loss model in Section 6 measures.</p>
 </div>
 </div>
 </div>
@@ -9364,12 +9363,12 @@ reference season totals: {2023: 2655.0, 2024: 2681.0, 2025: 2662.0}
 </tr>
 </tbody>
 </table>
-<p>Total loss is capped at 35 %. The same coefficients as the Kampot analysis are used, so the two sites are directly comparable.</p>
+<p>Total loss is capped at 35 %. Every coefficient is fixed in the code below and applied unchanged to every hour of the season.</p>
 <table>
 <thead>
 <tr>
 <th>Stressor</th>
-<th style="text-align:right">Count at Pursat</th>
+<th style="text-align:right">Count at the field</th>
 <th style="text-align:right">Penalty</th>
 <th style="text-align:right">Loss</th>
 </tr>
@@ -9491,7 +9490,7 @@ TOTAL LOSS: -32.18% (cap 35%) -&gt; achieved yield: 1.051 kg/plant
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Where the loss comes from — and how much rests on the proxy.</strong> The disease-pressure channel dominates: <strong>1,209 hours with RH ≥ 90 %</strong> versus 878 at Kampot, despite a lower mean humidity. Of those hours, <strong>686 are actual 2026 observations</strong> and <strong>523</strong> come from the labelled 2025 proxy window, so <strong>10.46 of the 32.18 percentage points</strong> (≈ 33 %) depend on the proxy — the remaining <strong>21.72</strong> points are driven by real 2026 weather. No heat above 35 °C occurred inside the 45–150 DAT window, no day exceeded 50 mm, and no dry spell ran past 7 days.</p>
+<p><strong>Where the loss comes from — and how much rests on the proxy.</strong> The disease-pressure channel dominates: <strong>1,209 hours with RH ≥ 90 %</strong>, even though season-mean humidity is only 83.7 % — the long humid nights, not the daily average, are what drive the loss. Of those hours, <strong>686 are actual 2026 observations</strong> and <strong>523</strong> come from the labelled 2025 proxy window, so <strong>10.46 of the 32.18 percentage points</strong> (≈ 33 %) depend on the proxy — the remaining <strong>21.72</strong> points are driven by real 2026 weather. No heat above 35 °C occurred inside the 45–150 DAT window, no day exceeded 50 mm, and no dry spell ran past 7 days.</p>
 </div>
 </div>
 </div>
@@ -9545,8 +9544,8 @@ TOTAL LOSS: -32.18% (cap 35%) -&gt; achieved yield: 1.051 kg/plant
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="7.-Daily-attainable-yield-(1st-harvest-%E2%86%92-end-of-season)">7. Daily attainable yield (1st harvest → end of season)<a class="anchor-link" href="#7.-Daily-attainable-yield-(1st-harvest-%E2%86%92-end-of-season)">¶</a></h2><p>Attainable yield = plants × achieved kg/plant, distributed over the harvest window (<strong>18/09/2026 → 04/12/2026</strong>) with a smooth bell-shaped picking curve peaking mid-season — the same distribution used for the Kampot analysis, so the two sites can be compared directly.</p>
-<p><strong>Area options from the brief data:</strong> 113 blocks (A1-A66 + B1-B47) = <strong>56.5 ha</strong>, or 69 planted plots = <strong>34.5 ha</strong>; density <strong>25,000 plants/ha</strong> as fixed by the brief. Pursat: <strong>26,280 kg/ha</strong>, season totals <strong>1,484.8 t</strong> and <strong>906.7 t</strong>; daily peak <strong>680 kg/ha/day</strong> on 26 Oct 2026.</p>
+<h2 id="7.-Daily-attainable-yield-(1st-harvest-%E2%86%92-end-of-season)">7. Daily attainable yield (1st harvest → end of season)<a class="anchor-link" href="#7.-Daily-attainable-yield-(1st-harvest-%E2%86%92-end-of-season)">¶</a></h2><p>Attainable yield = plants × achieved kg/plant, distributed over the harvest window (<strong>18/09/2026 → 04/12/2026</strong>) with a smooth bell-shaped picking curve peaking mid-season, the same curve used throughout this notebook.</p>
+<p><strong>Area options from the brief data:</strong> 113 blocks (A1-A66 + B1-B47) = <strong>56.5 ha</strong>, or 69 planted plots = <strong>34.5 ha</strong>; density <strong>25,000 plants/ha</strong> as fixed by the brief. Result: <strong>26,280 kg/ha</strong>, season totals <strong>1,484.8 t</strong> and <strong>906.7 t</strong>; daily peak <strong>680 kg/ha/day</strong> on 26 Oct 2026.</p>
 </div>
 </div>
 </div>
@@ -10025,241 +10024,13 @@ plant-available water storage = 90 mm (AWC 0.2 x rooting depth 0.45 m)
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ebb145e2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="9.-Kampot-vs-Pursat-%E2%80%94-what-actually-changed">9. Kampot vs Pursat — what actually changed<a class="anchor-link" href="#9.-Kampot-vs-Pursat-%E2%80%94-what-actually-changed">¶</a></h2><p>Both runs use identical methods, identical coefficients and the identical 2026 season window. The only thing that differs is the site.</p>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th style="text-align:right">Kampot (10.61 N)</th>
-<th style="text-align:right">Pursat (12.14 N)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Season GDD (base 10)</td>
-<td style="text-align:right">2,685.49</td>
-<td style="text-align:right">2,620.58</td>
-</tr>
-<tr>
-<td>Mean daily GDD</td>
-<td style="text-align:right">17.67</td>
-<td style="text-align:right">17.24</td>
-</tr>
-<tr>
-<td>Mean Tmean (C)</td>
-<td style="text-align:right">27.37</td>
-<td style="text-align:right">26.84</td>
-</tr>
-<tr>
-<td>Max T2M (C)</td>
-<td style="text-align:right">31.82</td>
-<td style="text-align:right">35.42</td>
-</tr>
-<tr>
-<td>Hours &gt; 35 C (45-150 DAT)</td>
-<td style="text-align:right">0.00</td>
-<td style="text-align:right">0.00</td>
-</tr>
-<tr>
-<td>Rain total (mm)</td>
-<td style="text-align:right">1,401.84</td>
-<td style="text-align:right">900.37</td>
-</tr>
-<tr>
-<td>Rainy days</td>
-<td style="text-align:right">134.00</td>
-<td style="text-align:right">108.00</td>
-</tr>
-<tr>
-<td>Mean RH (%)</td>
-<td style="text-align:right">85.47</td>
-<td style="text-align:right">83.68</td>
-</tr>
-<tr>
-<td>Hours RH &gt;= 90 % (45-150 DAT)</td>
-<td style="text-align:right">878.00</td>
-<td style="text-align:right">1,209.00</td>
-</tr>
-<tr>
-<td>GWETROOT mean</td>
-<td style="text-align:right">0.85</td>
-<td style="text-align:right">0.70</td>
-</tr>
-<tr>
-<td>Est. weather yield loss (%)</td>
-<td style="text-align:right">27.86</td>
-<td style="text-align:right">32.18</td>
-</tr>
-<tr>
-<td>kg/plant</td>
-<td style="text-align:right">1.12</td>
-<td style="text-align:right">1.05</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Reading the table:</strong> Pursat is <strong>drier and cooler</strong>, which is good — 500 mm less rain, no heat above 35 °C inside the sensitive window, and a root zone that never saturates for long. But the <strong>harmattan-style humid nights are more frequent</strong>: 1,209 hours at RH ≥ 90 % against 878 at Kampot, which is what pushes the modelled loss from −27.9 % to −32.2 % and the attained yield from 1.12 to <strong>1.05 kg/plant</strong>. The takeaway is clear and slightly counter-intuitive: <strong>for this variety at this location, humidity-driven disease is a bigger constraint than rainfall or heat</strong>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=54e38241">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">kc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE</span><span class="p">,</span> <span class="s2">"Kampot_weather_hourly_2026_season.csv"</span><span class="p">))</span>
-<span class="n">kc</span><span class="p">[</span><span class="s2">"date"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">kc</span><span class="p">[</span><span class="s2">"date"</span><span class="p">])</span>
-<span class="n">kd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE</span><span class="p">,</span> <span class="s2">"Kampot_GDD_daily_2026.csv"</span><span class="p">))</span>
-<span class="n">kcwin</span> <span class="o">=</span> <span class="n">kc</span><span class="p">[(</span><span class="n">kc</span><span class="p">[</span><span class="s2">"DAT"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">45</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">kc</span><span class="p">[</span><span class="s2">"DAT"</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">150</span><span class="p">)]</span>
-
-<span class="n">comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">"metric"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Season GDD (base 10)"</span><span class="p">,</span> <span class="s2">"Mean daily GDD"</span><span class="p">,</span> <span class="s2">"Mean Tmean (C)"</span><span class="p">,</span> <span class="s2">"Max T2M (C)"</span><span class="p">,</span>
-               <span class="s2">"Hours &gt; 35 C (45-150 DAT)"</span><span class="p">,</span> <span class="s2">"Rain total (mm)"</span><span class="p">,</span> <span class="s2">"Rainy days"</span><span class="p">,</span>
-               <span class="s2">"Mean RH (%)"</span><span class="p">,</span> <span class="s2">"Hours RH &gt;= 90 % (45-150 DAT)"</span><span class="p">,</span> <span class="s2">"GWETROOT mean"</span><span class="p">,</span>
-               <span class="s2">"Weather yield loss (%)"</span><span class="p">,</span> <span class="s2">"kg/plant"</span><span class="p">],</span>
-    <span class="s2">"Kampot"</span><span class="p">:</span> <span class="p">[</span><span class="n">kd</span><span class="p">[</span><span class="s2">"GDD_cum"</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">kd</span><span class="p">[</span><span class="s2">"GDD_day"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">kc</span><span class="p">[</span><span class="s2">"T2M_C"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
-               <span class="n">kc</span><span class="p">[</span><span class="s2">"T2M_C"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="nb">int</span><span class="p">((</span><span class="n">kcwin</span><span class="p">[</span><span class="s2">"T2M_C"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">35</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
-               <span class="n">kc</span><span class="p">[</span><span class="s2">"PRECTOTCORR_mm"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-               <span class="nb">int</span><span class="p">((</span><span class="n">kc</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"date"</span><span class="p">)[</span><span class="s2">"PRECTOTCORR_mm"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
-               <span class="n">kc</span><span class="p">[</span><span class="s2">"RH2M_pct"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="nb">int</span><span class="p">((</span><span class="n">kcwin</span><span class="p">[</span><span class="s2">"RH2M_pct"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
-               <span class="n">kc</span><span class="p">[</span><span class="s2">"GWETROOT_frac"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mf">27.86</span><span class="p">,</span> <span class="mf">1.118</span><span class="p">],</span>
-    <span class="s2">"Pursat"</span><span class="p">:</span> <span class="p">[</span><span class="n">daily</span><span class="p">[</span><span class="s2">"GDD_cum"</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">daily</span><span class="p">[</span><span class="s2">"GDD_day"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">"T2M_C"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
-               <span class="n">df</span><span class="p">[</span><span class="s2">"T2M_C"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">h35</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">"PRECTOTCORR_mm"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-               <span class="nb">int</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"date"</span><span class="p">)[</span><span class="s2">"PRECTOTCORR_mm"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
-               <span class="n">df</span><span class="p">[</span><span class="s2">"RH2M_pct"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">rh90</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">"GWETROOT_frac"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
-               <span class="n">loss</span><span class="p">,</span> <span class="n">achieved</span><span class="p">]})</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">comp</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>metric</th>
-<th>Kampot</th>
-<th>Pursat</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>Season GDD (base 10)</td>
-<td>2685.49</td>
-<td>2620.58</td>
-</tr>
-<tr>
-<th>1</th>
-<td>Mean daily GDD</td>
-<td>17.67</td>
-<td>17.24</td>
-</tr>
-<tr>
-<th>2</th>
-<td>Mean Tmean (C)</td>
-<td>27.37</td>
-<td>26.84</td>
-</tr>
-<tr>
-<th>3</th>
-<td>Max T2M (C)</td>
-<td>31.82</td>
-<td>35.42</td>
-</tr>
-<tr>
-<th>4</th>
-<td>Hours &gt; 35 C (45-150 DAT)</td>
-<td>0.00</td>
-<td>0.00</td>
-</tr>
-<tr>
-<th>5</th>
-<td>Rain total (mm)</td>
-<td>1401.84</td>
-<td>900.37</td>
-</tr>
-<tr>
-<th>6</th>
-<td>Rainy days</td>
-<td>134.00</td>
-<td>108.00</td>
-</tr>
-<tr>
-<th>7</th>
-<td>Mean RH (%)</td>
-<td>85.47</td>
-<td>83.68</td>
-</tr>
-<tr>
-<th>8</th>
-<td>Hours RH &gt;= 90 % (45-150 DAT)</td>
-<td>878.00</td>
-<td>1209.00</td>
-</tr>
-<tr>
-<th>9</th>
-<td>GWETROOT mean</td>
-<td>0.85</td>
-<td>0.70</td>
-</tr>
-<tr>
-<th>10</th>
-<td>Weather yield loss (%)</td>
-<td>27.86</td>
-<td>32.18</td>
-</tr>
-<tr>
-<th>11</th>
-<td>kg/plant</td>
-<td>1.12</td>
-<td>1.05</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a17c3c8d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="10.-Figures">10. Figures<a class="anchor-link" href="#10.-Figures">¶</a></h2>
+<h2 id="9.-Figures">9. Figures<a class="anchor-link" href="#9.-Figures">¶</a></h2>
 </div>
 </div>
 </div>
@@ -10268,7 +10039,7 @@ plant-available water storage = 90 mm (AWC 0.2 x rooting depth 0.45 m)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
@@ -10310,7 +10081,7 @@ plant-available water storage = 90 mm (AWC 0.2 x rooting depth 0.45 m)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
@@ -10346,7 +10117,7 @@ plant-available water storage = 90 mm (AWC 0.2 x rooting depth 0.45 m)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
@@ -10385,7 +10156,7 @@ plant-available water storage = 90 mm (AWC 0.2 x rooting depth 0.45 m)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">peak</span> <span class="o">=</span> <span class="n">ydf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ydf</span><span class="p">[</span><span class="s2">"kg_per_ha"</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
@@ -10430,12 +10201,12 @@ Season total (69 planted plots = 34.5 ha): 906.7 t | 11,624 kg/day average
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="11.-Findings-&amp;-limitations">11. Findings &amp; limitations<a class="anchor-link" href="#11.-Findings-&amp;-limitations">¶</a></h2><p><strong>Findings</strong></p>
+<h2 id="10.-Findings-&amp;-limitations">10. Findings &amp; limitations<a class="anchor-link" href="#10.-Findings-&amp;-limitations">¶</a></h2><p><strong>Findings</strong></p>
 <ul>
-<li>At the instructor's Pursat field, 2026 accumulates <strong>2,621 GDD</strong> (base 10 °C) — <strong>-46 GDD</strong> against the local 2023–2025 mean, a marginally cool season.</li>
+<li>At the instructor's field, 2026 accumulates <strong>2,621 GDD</strong> (base 10 °C) — <strong>-46 GDD</strong> against the local 2023–2025 mean, a marginally cool season.</li>
 <li>All ten stages therefore arrive <strong>1–2 days later</strong> than the standard DAT calendar; first harvest is predicted for <strong>18/09/2026</strong>, end of cycle around <strong>04/12/2026</strong> (extrapolated 2 days past the window).</li>
 <li>Weather loss is <strong>−32.2 %</strong>, driven almost entirely by <strong>RH ≥ 90 % disease pressure</strong> (1,209 hours), with small contributions from warm nights and 32–35 °C hours. Attained yield <strong>1.05 kg/plant ≈ 26,280 kg/ha</strong>, season total <strong>1,484.8 t</strong> (56.5 ha) or <strong>906.7 t</strong> (34.5 ha).</li>
-<li>Compared with Kampot, Pursat is <strong>cooler and 36 % drier</strong> but has <strong>38 % more high-humidity hours</strong> — the loss is 4.3 points higher despite the drier site.</li>
+<li>The site is comparatively dry (900 mm) and cool (26.8 °C mean), yet the loss is still high at −32.2 %: <strong>humidity, not rainfall or heat, is the limiting factor</strong> for this variety here.</li>
 <li>The soil report closes the loop: both fields are <strong>silt loam at pH ≈ 7.1</strong>, above the 5.0–6.5 chili optimum, with very high available P (155/173 ppm) and a healthy CEC (~18.5). A2 is the better field (base saturation 78 %, K almost 3× higher).</li>
 <li>The result is robust to the loss coefficients: ±50 % keeps attained yield within <strong>1.01–1.30 kg/plant</strong>.</li>
 </ul>
@@ -10443,14 +10214,10 @@ Season total (69 planted plots = 34.5 ha): 906.7 t | 11,624 kg/day average
 <ul>
 <li>13/10/2026 → 02/12/2026 is a <strong>labelled 2025 proxy</strong> (MERRA-2 latency); ≈ 33 % of the modelled loss rests on it.</li>
 <li>The end-of-cycle date is <strong>extrapolated</strong>, because 2026 does not reach the calibrated 2,649 GDD inside the window.</li>
-<li>GDD base temperature fixed at 10 °C; thresholds calibrated on three reference seasons, with <strong>no field-observed stage dates</strong> available to validate them.</li>
-<li>Stress-loss coefficients are <strong>documented assumptions</strong>, not fitted to field data; the farm's spray programme is not modelled.</li>
-<li>NASA POWER grid cell is ~0.5° × 0.625° (<strong>≈ 55 × 69 km</strong>) — one point represents the whole farm, so on-site variation and the real Pursat terrain are not resolved. ERA5-Land (~9 km) is the natural next step.</li>
-<li>The soil lab analysed <strong>two fields (A1, A2)</strong>, not every block; results are assumed representative of the plantation.</li>
-<li>The plantation area is taken from the brief's block/plot inventory (113 blocks or 69 plots); the Pursat farm's actual planted area should be confirmed.</li>
-<li>The five-stage data-collection form's records (DAT, height, yield per harvested block) were <strong>not available</strong> for validation.</li>
+<li>GDD base temperature fixed at 10 °C; the standard calendar is the supplier's, not field-observed.</li>
+<li>Yield potential (1.55 kg/plant), the loss coefficients, the planted area, and the 90 mm soil water capacity are documented assumptions, not measurements.</li>
+<li>NASA POWER is a ~55 km grid product at this point, so the figures describe the grid cell, not a microclimate in the field.</li>
 </ul>
-<p><strong>Future data needs</strong> — observed stage dates per block, the farm's spray and fertiliser records, block harvest weights for 2026, the release of the post-12/10/2026 weather, and a finer-resolution reanalysis (ERA5-Land) to test the coarse POWER grid.</p>
 </div>
 </div>
 </div>
@@ -10461,7 +10228,7 @@ Season total (69 planted plots = 34.5 ha): 906.7 t | 11,624 kg/day average
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="12.-Output-files-(this-folder)">12. Output files (this folder)<a class="anchor-link" href="#12.-Output-files-(this-folder)">¶</a></h2><table>
+<h2 id="11.-Output-files-(this-folder)">11. Output files (this folder)<a class="anchor-link" href="#11.-Output-files-(this-folder)">¶</a></h2><table>
 <thead>
 <tr>
 <th>File</th>

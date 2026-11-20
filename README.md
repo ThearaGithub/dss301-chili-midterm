@@ -39,9 +39,9 @@ dry spell.
 |---|---|
 | ![Loss channels](fig_slide_loss.png) | ![Soil pH](fig_pursat_soil_ph.png) |
 
-| Kampot vs Pursat cross-check | Reference seasons |
-|---|---|
-| ![Site comparison](fig_slide_compare.png) | ![Season comparison](fig_pursat_gdd_seasons.png) |
+| Season normality — 2023–2025 reference against 2026 |
+|---|
+| ![Season comparison](fig_pursat_gdd_seasons.png) |
 
 ## Method
 
@@ -59,8 +59,8 @@ dry spell.
 - The **end-of-cycle date is extrapolated**: 2026 reaches 2,621 GDD, short of the 2,649 threshold.
 - Potential yield (1.55 kg/plant), planting density (25,000 plants/ha) and the six loss
   coefficients are **assumptions from the method**, not measurements at this field.
-- Planted area (56.5 ha / 34.5 ha) is carried from the earlier farm layout, so tonnages are
-  indicative; per-hectare figures are unaffected.
+- Block counts (113 blocks / 69 plots) are ours, not surveyed; at the brief's 0.5 ha per block
+  they give 56.5 ha / 34.5 ha, so tonnages are indicative while per-hectare figures are unaffected.
 - NASA POWER is a ~55 km grid; ERA5-Land (~9 km) was used only as a cross-check.
 
 ## Data sources
@@ -83,7 +83,7 @@ dry spell.
 | `Pursat_daily_yield.csv` | Daily yield distribution |
 | `Pursat_soil_lab_11-23.csv` | Soil lab results, A1 / A2 |
 | `fig_pursat_*.png` | GDD timeline, daily yield, season comparison, soil pH |
-| `fig_slide_*.png`, `banner.png` | README banner and presentation charts |
+| `fig_slide_loss.png`, `banner.png` | README banner and presentation chart |
 | `DSS301_RedSky86_Pursat_Slides.pptx` | 13-slide presentation deck |
 | `PRESENTATION_SCRIPT.md` | Speaker script, timings and Q&A bank for four presenters |
 | `Links.md` | Source links |
